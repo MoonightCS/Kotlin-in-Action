@@ -22,7 +22,7 @@ fun main(args: Array<String>) {
     view.click()
     view.showOff()
 
-    val button: Button = Button();
+    val button = Button();
     button.click()
     button.showOff()
 }
