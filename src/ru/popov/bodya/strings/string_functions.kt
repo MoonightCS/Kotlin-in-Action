@@ -2,6 +2,8 @@
 
 package ru.popov.bodya.strings
 
+import ru.popov.bodya.functions.joinToString
+
 /**
  * Пример функции с дефолтными значениями
  */
@@ -27,3 +29,10 @@ fun <T> joinToStringWithDefaultValues(
  * К методам объекта получателя можно обращаться без this
  */
 fun String.lastChar(): Char = this.get(this.length - 1)
+
+
+fun main(args: Array<String>) {
+    val list = listOf(1, 2, 3)
+    println(list.joinToString("; ", "(", ")"))
+    println(list.joinToString(postfix = ";", prefix = "#"))
+}

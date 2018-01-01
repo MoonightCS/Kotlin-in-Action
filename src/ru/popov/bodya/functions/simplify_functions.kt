@@ -6,7 +6,7 @@ import ru.popov.bodya.strings.joinToStringWithDefaultValues
 import ru.popov.bodya.strings.lastChar
 
 const val UNIX_LINE_SEPARATOR = "\n"
-var opCount = 0
+var opCount = 0  // Объяление свойства верхнего уровня
 
 fun performOperation() {
     opCount++
@@ -17,9 +17,9 @@ fun reportOperationCount() {
 }
 
 fun <T> Collection<T>.joinToString(
-        separator: String,
-        prefix: String,
-        postfix: String
+        separator: String = ", ",
+        prefix: String = "",
+        postfix: String = ""
 ): String {
 
     val result = StringBuilder(prefix)
