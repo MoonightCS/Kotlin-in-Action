@@ -43,7 +43,10 @@ fun getPeople(): List<Person> {
     return listOf(Person("Alice", 29), Person("Bob", 31))
 }
 
+fun getFunPeople() = listOf(Person("Alice", 29), Person("Bob", 31))
+
 fun main(args: Array<String>) {
     println(getPeople())
+    println(getFunPeople())
     println(listOf(1, 2, 3, 4, 5).fold(0, { acc, i -> acc + i }))
 }
