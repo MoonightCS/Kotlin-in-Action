@@ -1,4 +1,4 @@
-package ru.popov.bodya.collections
+package ru.popov.bodya.keywords
 
 infix fun Int.to(other: String) = Pair(this, other)
 
