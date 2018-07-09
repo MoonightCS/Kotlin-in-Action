@@ -1,5 +1,3 @@
-package ru.popov.bodya.keywords
-
 class A {
     companion object {
         fun bar() {

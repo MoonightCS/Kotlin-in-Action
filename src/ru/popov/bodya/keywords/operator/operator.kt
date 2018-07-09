@@ -1,4 +1,4 @@
-package ru.popov.bodya.overloading
+package ru.popov.bodya.keywords.operator
 
 data class Point(val x: Int, val y: Int) {
     operator fun plus(other: Point) = Point(x + other.x, y + other.y)
@@ -30,6 +30,9 @@ private operator fun MutablePoint.set(index: Int, value: Int) = when(index) {
     1 -> y = value
     else -> throw IndexOutOfBoundsException("Invalid coordinate $index")
 }
+
+data class Rectangle(val upperLeft: Point, val lowerRight: Point)
+operator fun Rectangle.contains(p: Point) = p.x in upperLeft.x until lowerRight.x && p.y in upperLeft.y until lowerRight.y
 
 fun main(args: Array<String>) {
     val p1 = Point(10, 20)
