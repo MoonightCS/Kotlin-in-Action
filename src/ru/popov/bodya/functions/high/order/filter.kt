@@ -1,12 +1,12 @@
 package ru.popov.bodya.functions.high.order
 
 private fun String.filter(predicate: (Char) -> Boolean): String {
-    val sb = StringBuilder();
+    val sb = StringBuilder()
     for (index in 0 until length) {
         val element = get(index)
         if (predicate(element)) sb.append(element)
     }
-    return sb.toString();
+    return sb.toString()
 }
 
 fun main(args: Array<String>) {
